@@ -13,3 +13,5 @@
 
 #chamar a função para querys distintas
 #realizar print das querys
+
+#extrair os resultados para um arquivo.txt

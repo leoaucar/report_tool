@@ -3,3 +3,5 @@ This is a report tool for the provided SQL Database
 This tool is intended to work only in the presence of the newsdata DB provided by Udacity.
 
 To generate a new report on the DB just run the file "report.py".
+
+The tool generates a .txt file that contains the results of the query.
