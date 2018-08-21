@@ -11,7 +11,7 @@ import psycopg2
 def query_maker(query_needed):
 #criar conexão com banco de dados
     try:
-        conn = psycopg2.connect("newsdata")
+        conn = psycopg2.connect("dbname=news")
     except:
         print ("Unable to connect to the database")
     cur = conn.cursor()
