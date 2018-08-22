@@ -1,8 +1,3 @@
-#responder:
-#1. Quais são os três artigos mais populares de todos os tempos?
-#2. Quem são os autores de artigos mais populares de todos os tempos?
-#3. Em quais dias mais de 1% das requisições resultaram em erros?
-
 #importar libraries necessárias
 import psycopg2
 
@@ -23,10 +18,22 @@ def query_maker(query_needed):
 #retorna resultados para serem usados
     return result
 
-#chamar a função para querys distintas
-test_string = "SELECT * from authors LIMIT 5;"
-top_authors = query_maker(test_string)
+#busca os artigos mais populares
+top_articles_query = "SELECT * from articles LIMIT 1;"
+top_articles = query_maker(top_articles_query)
+
+#busca os autores mais populares
+top_authors_query = "SELECT * from authors LIMIT 1;"
+top_authors = query_maker(top_authors_query)
+
+#busca dias com + de 1% de erros nas requests
+top_errors_query = "SELECT * from log LIMIT 1;"
+top_errors = query_maker(top_errors_query)
+
+
 #realizar print das querys
+print(top_articles)
 print(top_authors)
+print(top_errors)
 
 #extrair os resultados para um arquivo.txt
