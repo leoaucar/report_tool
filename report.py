@@ -32,8 +32,11 @@ top_errors = query_maker(top_errors_query)
 
 
 #realizar print das querys
+print("The most read articles are:")
 print(top_articles)
+print("The top authors:")
 print(top_authors)
+print("The days with more than 1% errors are:")
 print(top_errors)
 
 #extrair os resultados para um arquivo.txt
