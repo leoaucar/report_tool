@@ -37,3 +37,6 @@ print(top_authors)
 print(top_errors)
 
 #extrair os resultados para um arquivo.txt
+#cria ou abre um arquivo txt e configura para sempre sobrescrever resultados pelos mais atuais
+results = open("results.txt","w")
+results.write(str(top_articles) + str(top_errors) + str(top_authors))
