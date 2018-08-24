@@ -19,7 +19,7 @@ def query_maker(query_needed):
     return result
 
 #busca os artigos mais populares
-top_articles_query = "SELECT * from articles LIMIT 1;"
+top_articles_query = "SELECT count(*) as views, articles.title FROM log JOIN articles ON articles.slug = substring(log.path,10) GROUP BY articles.title ORDER BY views DESC;"
 top_articles = query_maker(top_articles_query)
 
 #busca os autores mais populares
