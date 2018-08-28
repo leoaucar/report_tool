@@ -19,7 +19,9 @@ def query_maker(query_needed):
     return result
 
 #busca os artigos mais populares
-top_articles_query = "SELECT count(*) as views, articles.title FROM log JOIN articles ON articles.slug = substring(log.path,10) GROUP BY articles.title ORDER BY views DESC;"
+#Faz um count da quantidade de logs associados à uma determinada slug
+#para isso realiza um Join
+top_articles_query ="SELECT count(*) as views, articles.title FROM log JOIN articles ON articles.slug = substring(log.path,10) GROUP BY articles.title ORDER BY views DESC;"
 top_articles = query_maker(top_articles_query)
 
 #busca os autores mais populares
@@ -32,12 +34,13 @@ top_errors = query_maker(top_errors_query)
 
 
 #realizar print das querys
-print("The most read articles are:")
-print(top_articles)
-print("The top authors:")
-print(top_authors)
-print("The days with more than 1% errors are:")
-print(top_errors)
+print("The most read articles are:\n" +
+str(top_articles) + "\n\n" +
+"The top authors are:\n" +
+str(top_authors) + "\n\n" +
+"The days with more than 1% of errors are:\n" +
+str(top_errors)
+)
 
 #extrair os resultados para um arquivo.txt
 #cria ou abre um arquivo txt e configura para sempre sobrescrever resultados pelos mais atuais
