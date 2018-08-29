@@ -25,7 +25,7 @@ top_authors_query = "SELECT count(authors.name) as views, authors.name FROM (art
 top_authors = query_maker(top_authors_query)
 
 #busca dias com + de 1% de erros nas requests
-top_errors_query = "SELECT * from log LIMIT 1;"
+top_errors_query = "SELECT count(status), status, log.time::date as day FROM log GROUP BY day, status HAVING count(status = '404 NOT found') < count(status = '200 OK');"
 top_errors = query_maker(top_errors_query)
 
 final_result = ("The most read articles are:\n" +

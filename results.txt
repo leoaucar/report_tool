@@ -5,4 +5,4 @@ The top authors are:
 [(507594, 'Ursula La Multa'), (423457, 'Rudolf von Treppenwitz'), (170098, 'Anonymous Contributor'), (84557, 'Markoff Chaney')]
 
 The days with more than 1% of errors are:
-[('/', '198.51.100.195', 'GET', '200 OK', datetime.datetime(2016, 7, 1, 7, 0, tzinfo=psycopg2.tz.FixedOffsetTimezone(offset=0, name=None)), 1678923)]
+[]
