@@ -5,4 +5,4 @@ The top authors are:
 [(507594, 'Ursula La Multa'), (423457, 'Rudolf von Treppenwitz'), (170098, 'Anonymous Contributor'), (84557, 'Markoff Chaney')]
 
 The days with more than 1% of errors are:
-[]
+[(datetime.date(2016, 7, 17),)]
