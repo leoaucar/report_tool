@@ -17,6 +17,23 @@ def query_maker(query_needed):
     return result
 
 
+# Dupla de funçoes que formatará os resultados das querys para melhor leitura
+def format_result(query_result, intro_line):
+    result_string = ""
+    for i in query_result:
+        result_string += ("'" + str(i[1]) + "'" +
+                         " with " + str(i[0]) +
+                         " views" "\n")
+    return result_string
+
+
+def format_date(query_result):
+    result_string = "The days with more than 1% of log errors are: \n"
+    for i in query_result:
+        result_string += (str(i[0]))
+    return result_string
+
+
 # Busca os artigos mais populares
 # Faz um count da quantidade de logs associados à uma determinada slug
 # Para isso realiza um Join
@@ -48,20 +65,12 @@ top_errors_query = ("SELECT t1.day FROM " +
                     "WHERE oks / 100 < wrongs;")
 top_errors = query_maker(top_errors_query)
 
-def format_result(a):
-    result_string = ""
-    for i in a:
-        result_string += ("'" + str(i[1]) + "'" +
-                         " with " + str(i[0]) +
-                         " views" "\n")
-    return result_string
 
 final_result = ("The most read articles are:\n" +
                 format_result(top_articles) + "\n\n" +
                 "The top authors are:\n" +
                 format_result(top_authors) + "\n\n" +
-                "The days with more than 1% of errors are:\n" +
-                str(top_errors))
+                format_date(top_errors))
 
 
 # Realizar print das querys

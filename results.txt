@@ -16,5 +16,5 @@ The top authors are:
 'Markoff Chaney' with 84557 views
 
 
-The days with more than 1% of errors are:
-[(datetime.date(2016, 7, 17),)]
+The days with more than 1% of log errors are: 
+2016-07-17
