@@ -42,8 +42,8 @@ Make sure the database file is extracted inside the folder "/vagrant" in your VM
 
 In your terminal, go to the folder "/vagrant" inside the VM folder
 ```
-```
 sudo vagrant up
+```
 
 Wait for the system setup and then connect via SSH
 ```
