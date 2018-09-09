@@ -22,8 +22,8 @@ def format_result(query_result):
     result_string = ""
     for i in query_result:
         result_string += ("'" + str(i[1]) + "'" +
-                         " with " + str(i[0]) +
-                         " views" "\n")
+                          " with " + str(i[0]) +
+                          " views" "\n")
     return result_string
 
 
