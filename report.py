@@ -18,7 +18,7 @@ def query_maker(query_needed):
 
 
 # Dupla de funçoes que formatará os resultados das querys para melhor leitura
-def format_result(query_result, intro_line):
+def format_result(query_result):
     result_string = ""
     for i in query_result:
         result_string += ("'" + str(i[1]) + "'" +
