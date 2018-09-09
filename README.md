@@ -1,5 +1,5 @@
 # REPORT TOOL README
-This is a report tool for the provided SQL Database.
+This is a report tool designed to give reports both on terminal and as a txt file for the Udacity's provideds News DB.
 
 
 ## Getting started
