@@ -1,8 +1,20 @@
 The most read articles are:
-[(338647, 'Candidate is jerk, alleges rival'), (253801, 'Bears love berries, alleges bear'), (170098, 'Bad things gone, say good people'), (84906, "Goats eat Google's lawn"), (84810, 'Trouble for troubled troublemakers'), (84557, 'Balloon goons doomed'), (84504, 'There are a lot of bears'), (84383, 'Media obsessed with bears')]
+'Candidate is jerk, alleges rival' with 338647 views
+'Bears love berries, alleges bear' with 253801 views
+'Bad things gone, say good people' with 170098 views
+'Goats eat Google's lawn' with 84906 views
+'Trouble for troubled troublemakers' with 84810 views
+'Balloon goons doomed' with 84557 views
+'There are a lot of bears' with 84504 views
+'Media obsessed with bears' with 84383 views
+
 
 The top authors are:
-[(507594, 'Ursula La Multa'), (423457, 'Rudolf von Treppenwitz'), (170098, 'Anonymous Contributor'), (84557, 'Markoff Chaney')]
+'Ursula La Multa' with 507594 views
+'Rudolf von Treppenwitz' with 423457 views
+'Anonymous Contributor' with 170098 views
+'Markoff Chaney' with 84557 views
+
 
 The days with more than 1% of errors are:
 [(datetime.date(2016, 7, 17),)]
