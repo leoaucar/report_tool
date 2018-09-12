@@ -17,4 +17,4 @@ The top authors are:
 
 
 The days with more than 1% of log errors are: 
-2016-07-17
+Day: 2016-07-17 with 2.263% of errors

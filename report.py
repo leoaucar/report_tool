@@ -30,7 +30,9 @@ def format_result(query_result):
 def format_date(query_result):
     result_string = "The days with more than 1% of log errors are: \n"
     for i in query_result:
-        result_string += (str(i[0]))
+        result_string += ("Day: " + (str(i[0])) +
+                          " with " + (str(round(i[3]*100, 3))) +
+                          "% of errors")
     return result_string
 
 
@@ -53,7 +55,8 @@ top_authors_query = ("SELECT count(authors.name) as views, authors.name " +
 top_authors = query_maker(top_authors_query)
 
 # Busca dias com + de 1% de erros nas requests
-top_errors_query = ("SELECT t1.day FROM " +
+top_errors_query = ("SELECT t1.day, oks, wrongs," +
+                    " wrongs::numeric/(wrongs+oks) as errors_share FROM " +
                     "(SELECT count(status) as oks, log.time::date as day " +
                     "FROM log WHERE status = '200 OK' GROUP BY day) " +
                     "as t1 LEFT JOIN " +
