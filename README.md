@@ -1,6 +1,12 @@
 # REPORT TOOL README
 This is a report tool designed to give reports both on terminal and as a txt file for the Udacity's provideds News DB.
 
+### Questions this tool answer
+<ul>
+<li>What are the most read articles?</li>
+<li>What are the most popular authors?</li>
+<li>In wich days more than 1% of logs where errors?</li>
+</ul>
 
 ## Getting started
 
